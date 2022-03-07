@@ -29,11 +29,11 @@ public class HelloController {
     }
 
     @GetMapping("hello-api")
-    @ResponseBody
+    @ResponseBody          // --> HttpMessageConverter 동작 -> 단순 문자면 SpringConverter 객체면 JsonConverter
     public Hello helloApi(@RequestParam("name") String name){
         Hello hello = new Hello();
         hello.setName(name);
-        return hello;    //  json으로 반환 {"name" : "value"}
+        return hello;    //  객체는 json으로 반환 {"name" : "value"}
     }
 
     static class Hello{   //getter setter
