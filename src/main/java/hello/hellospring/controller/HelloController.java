@@ -33,7 +33,7 @@ public class HelloController {
     public Hello helloApi(@RequestParam("name") String name){
         Hello hello = new Hello();
         hello.setName(name);
-        return hello;
+        return hello;    //  json으로 반환 {"name" : "value"}
     }
 
     static class Hello{   //getter setter
