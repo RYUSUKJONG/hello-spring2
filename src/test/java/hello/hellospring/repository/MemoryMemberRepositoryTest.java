@@ -15,7 +15,6 @@ class MemoryMemberRepositoryTest {
         repository.clearStore();   //테스트마다 저장소를 한번씩 비워줌
     }
 
-
     @Test
     void save() {
         Member member = new Member();
